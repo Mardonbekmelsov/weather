@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather/controllers/weather_controller.dart';
 import 'package:weather/views/screens/home_screen.dart';
-<<<<<<< HEAD
-import 'package:shared_preferences/shared_preferences.dart';
-=======
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
+
 
 // ignore: must_be_immutable
 class SearchScreen extends StatefulWidget {
@@ -15,11 +12,7 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-<<<<<<< HEAD
- 
 
-=======
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
   WeatherController weatherController = WeatherController();
   TextEditingController searchController = TextEditingController();
   String? searchError;
@@ -48,11 +41,8 @@ class _SearchScreenState extends State<SearchScreen> {
                     padding: const EdgeInsets.all(20.0),
                     child: TextField(
                       controller: searchController,
-<<<<<<< HEAD
-                      style: TextStyle(color: Colors.white),
-=======
+
                       style: const TextStyle(color: Colors.white),
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
                       decoration: InputDecoration(
                         label: const Text(
                           "Shaxar nomini kiriting",
@@ -75,10 +65,6 @@ class _SearchScreenState extends State<SearchScreen> {
                                     });
                                   } else {
                                     searchCheck = true;
-<<<<<<< HEAD
-                                
-=======
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
                                     Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(
@@ -92,15 +78,9 @@ class _SearchScreenState extends State<SearchScreen> {
                                   color: Colors.white,
                                 ))
                             : SizedBox(
-<<<<<<< HEAD
-                                width: 10,
-                                child: Image.asset("assets/search.gif"),
-                              ),
-=======
                               width: 10,
                               child: Image.asset("assets/load.gif"),
                             ),
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
                         errorText: searchError,
                       ),
                     ),

@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
+import 'dart:async';
+
 import 'package:weather/services/weather_http_service.dart';
 
 class WeatherController {

@@ -17,11 +17,7 @@ class WeatherServices {
       final response = await http.get(url);
       final data = jsonDecode(response.body);
       selectedCity = data['city']['name'];
-<<<<<<< HEAD
-      saveCountry(selectedCity);
-=======
-      saveLocation(selectedCity);
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
+
       data['list'].forEach((value) {
         loadedWeather.add(Weather.fromJson(value));
       });
@@ -33,14 +29,14 @@ class WeatherServices {
   }
 }
 
-<<<<<<< HEAD
+
  Future<void> saveCountry(String country) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('country', country);
   }
-=======
+
 Future<void> saveLocation(String location) async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   await prefs.setString('location', location);
 }
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
+

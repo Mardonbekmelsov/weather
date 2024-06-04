@@ -126,13 +126,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
-<<<<<<< HEAD
-                                boxShadow: const [
-                                  BoxShadow(color: Color(0xff00000040))
-=======
+
                                 boxShadow:const [
                                    BoxShadow(color: Color(0xff00000040))
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
                                 ],
                                 borderRadius: BorderRadius.circular(25),
                                 gradient: const LinearGradient(
@@ -145,12 +141,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Column(
                               children: [
                                 Padding(
-<<<<<<< HEAD
+
                                   padding:
                                       const EdgeInsets.fromLTRB(40, 15, 40, 15),
-=======
-                                  padding: const EdgeInsets.fromLTRB(40, 15, 40, 15),
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
+
+
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -172,12 +167,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Container(
                                   width: double.infinity,
                                   height: 2,
-<<<<<<< HEAD
-                                  color:
-                                      const Color.fromARGB(255, 183, 167, 223),
-=======
+
                                   color: const Color.fromARGB(255, 183, 167, 223),
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
                                 ),
                                 Padding(
                                   padding:
@@ -255,55 +246,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Image.asset("assets/load.gif"),
                   ),
             IconButton(
-<<<<<<< HEAD
-                onPressed: () async {
-                  Location location = Location();
 
-                  bool serviceEnabled;
-                  PermissionStatus permissionGranted;
-                  LocationData _locationData;
-
-                  serviceEnabled = await location.serviceEnabled();
-                  if (!serviceEnabled) {
-                    serviceEnabled = await location.requestService();
-                    if (!serviceEnabled) {
-                      return;
-                    }
-                  }
-
-                  permissionGranted = await location.hasPermission();
-                  if (permissionGranted == PermissionStatus.denied) {
-                    permissionGranted = await location.requestPermission();
-                    if (permissionGranted != PermissionStatus.granted) {
-                      return;
-                    }
-                  }
-
-                  _locationData = await location.getLocation();
-                  if (_locationData.latitude != null) {
-                    if (!mounted) return;
-                    Navigator.pushReplacement(context, MaterialPageRoute(
-                      builder: (context) {
-                        return HomeScreen(latLung: [
-                          _locationData.latitude,
-                          _locationData.longitude
-                        ]);
-                      },
-                    ));
-                  }
-                },
-                icon: const Icon(
-                  Icons.location_on_outlined,
-                  color: Colors.white,
-                  size: 45,
-                )),
-            IconButton(
-                onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => SearchScreen()));
-                },
-                icon: const Icon(
-=======
                 onPressed: () {
                   Navigator.pushReplacement(
                       context,
@@ -312,7 +255,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ));
                 },
                 icon: const Icon(
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
                   Icons.search,
                   color: Colors.white,
                   size: 45,

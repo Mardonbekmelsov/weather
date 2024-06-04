@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-<<<<<<< HEAD
-import 'package:weather/models/citys.dart';
-=======
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
 import 'package:weather/services/weather_http_service.dart';
 import 'package:location/location.dart';
 import 'package:weather/views/screens/home_screen.dart';
@@ -20,25 +16,14 @@ class _MainScreenState extends State<MainScreen> {
   String curLocation = 'tashkant';
   WeatherServices weatherServices = WeatherServices();
 
-<<<<<<< HEAD
-=======
-   
 
-
-  
-
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
   @override
   void initState() {
     _init();
     super.initState();
   }
-<<<<<<< HEAD
 
-  void askLocation() async {
-=======
   _askLocation()async{
->>>>>>> 1434b16df9ff7067d8946a164ed713c244a374eb
     Location location = Location();
 
     bool serviceEnabled;
@@ -72,22 +57,13 @@ class _MainScreenState extends State<MainScreen> {
       ));
     }
   }
-  _init() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? oldLocation= prefs.getString('location');
-    oldLocation==null?_askLocation() :Navigator.pushReplacement(context, MaterialPageRoute(
-        builder: (context) {
-          return HomeScreen(
-              latLung: oldLocation);
-        },
-      ));
-  }
+ 
 
   _init() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? oldLocation = prefs.getString("country");
     oldLocation == null
-        ? askLocation()
+        ? _askLocation()
         : Navigator.pushReplacement(
             context,
             MaterialPageRoute(
